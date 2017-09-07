@@ -1,4 +1,5 @@
-(setq-default show-trailing-whitespace t)
+(setq-default whitespace-style '(face trailing tab-mark))
+(global-whitespace-mode 1)
 
 
 ;;; Whitespace
