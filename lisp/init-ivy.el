@@ -25,6 +25,8 @@
     (setq-default ivy-re-builders-alist
                   '((t . ivy--regex-fuzzy)))))
 
+(global-set-key (kbd "C-x b") 'ivy-switch-buffer)
+
 (when (maybe-require-package 'ivy-historian)
   (add-hook 'after-init-hook (lambda () (ivy-historian-mode t))))
 
