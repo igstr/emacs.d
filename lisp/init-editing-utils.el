@@ -30,9 +30,9 @@
  ;; truncate-partial-width-windows nil
 )
 
-(global-auto-revert-mode)
-(setq global-auto-revert-non-file-buffers t
-      auto-revert-verbose nil)
+;; (global-auto-revert-mode)
+;; (setq global-auto-revert-non-file-buffers t
+;;       auto-revert-verbose nil)
 
 (transient-mark-mode t)
 
