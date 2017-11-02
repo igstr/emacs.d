@@ -7,7 +7,9 @@
 (when (executable-find "ag")
   (require-package 'ag)
   (require-package 'wgrep-ag)
-  (setq-default ag-highlight-search t)
+  (setq-default
+   ag-highlight-search t
+   ag-dired-arguments '("--nocolor" "-S" "-U"))
   (global-set-key (kbd "M-?") 'ag-project))
 
 
