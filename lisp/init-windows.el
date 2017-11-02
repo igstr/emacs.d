@@ -12,6 +12,9 @@
 (setq-default switch-window-timeout nil)
 (global-set-key (kbd "C-x o") 'switch-window)
 
+;; Commands for rotating open windows
+(require-package 'rotate)
+
 ;; Add shortcuts for swapping windows
 (require-package 'buffer-move)
 (global-set-key (kbd "<C-S-up>")     'buf-move-up)
