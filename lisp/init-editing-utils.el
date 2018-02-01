@@ -20,7 +20,6 @@
  ;; ediff-split-window-function 'split-window-horizontally
  ;; ediff-window-setup-function 'ediff-setup-windows-plain
  indent-tabs-mode nil
- make-backup-files nil
  ;; mouse-yank-at-point t
  save-interprogram-paste-before-kill t
  scroll-preserve-screen-position 'always
@@ -36,6 +35,14 @@
 
 (transient-mark-mode t)
 
+;; Setup autosave files
+(defconst emacs-autosaves-dir (concat user-emacs-directory "auto-saves/"))
+(if (not (file-exists-p emacs-autosaves-dir))
+        (make-directory emacs-autosaves-dir t))
+(setq auto-save-file-name-transforms `((".*" ,emacs-autosaves-dir t)))
+
+;; Setup backup files
+(setq make-backup-files nil)
 
  ;;; A simple visible bell which works in all terminal types
 
