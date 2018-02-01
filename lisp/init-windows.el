@@ -4,14 +4,6 @@
 ;;----------------------------------------------------------------------------
 (add-hook 'after-init-hook 'winner-mode)
 
-
-
-;; Make "C-x o" prompt for a target window when there are more than 2
-(require-package 'switch-window)
-(setq-default switch-window-shortcut-style 'alphabet)
-(setq-default switch-window-timeout nil)
-(global-set-key (kbd "C-x o") 'switch-window)
-
 ;; Commands for rotating open windows
 (require-package 'rotate)
 
@@ -21,6 +13,11 @@
 (global-set-key (kbd "<C-S-down>")   'buf-move-down)
 (global-set-key (kbd "<C-S-left>")   'buf-move-left)
 (global-set-key (kbd "<C-S-right>")  'buf-move-right)
+
+(global-set-key (kbd "C-S-b") 'windmove-left)
+(global-set-key (kbd "C-S-f") 'windmove-right)
+(global-set-key (kbd "C-S-p") 'windmove-up)
+(global-set-key (kbd "C-S-n") 'windmove-down)
 
 ;;----------------------------------------------------------------------------
 ;; When splitting window, show (other-buffer) in the new window
